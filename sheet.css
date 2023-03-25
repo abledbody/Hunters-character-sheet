@@ -1,0 +1,139 @@
+@font-face {
+	font-family: 'Merriweather';
+	font-style: normal;
+	font-weight: 400;
+	src: url("data/Merriweather.woff2") format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+	--background-color: #182933;
+	--raised-background-color: #324753;
+	--low-border-color: #4c6673;
+	--high-border-color: #fff;
+	--text-color: #fff;
+	--subtle-text-color: #4c6673;
+	--thin-border: 0.1vw solid var(--low-border-color);
+	--thick-border: 0.5vw solid var(--low-border-color);
+	--double-border: 1.5vw double var(--low-border-color);
+	--highlight-border: 0.5vw double var(--high-border-color);
+}
+
+body {
+	background-image: url("data/img/Blue Felt HQ.png");
+	background-size: 100%;
+	background-repeat: repeat-y;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-family: "Merriweather", sans-serif;
+	font-size: 1vw;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.scroll-decoration {
+	margin: 2vw 4vw;
+}
+
+.scroll-decoration img {
+	width: 100%;
+	src: var(--curly-header);
+}
+
+.tabs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 0;
+}
+
+.tab {
+	padding: 0.5vw 1vw;
+	cursor: pointer;
+	border-bottom: 0.3vw solid var(--low-border-color);
+	color: var(--subtle-text-color);
+}
+
+.tab.active {
+	border-bottom-color: var(--high-border-color);
+	color: var(--text-color);
+}
+
+.sheet {
+	display: none;
+	padding: 0 1%;
+}
+
+.sheet.active {
+	display: flex;
+	flex-direction: column;
+}
+
+.organizer {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.organizer .column {
+	flex-direction: column;
+}
+
+.main-box {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 0;
+	margin-left: 40px;
+	margin-right: 40px;
+	border-top: var(--thick-border);
+	border-bottom: var(--thick-border);
+	border-left: var(--double-border);
+	border-right: var(--double-border);
+}
+
+.split-column ~ .split-column {
+	border-left: var(--double-border);
+	margin: -1px 0;
+}
+
+.stat-box {
+	display: flex;
+	justify-content: space-between;
+	border: var(--highlight-border);
+	width: 100%;
+	margin: 1vw;
+	flex-grow: 1;
+}
+
+.associate-right {
+	text-align: right;
+}
+
+.stat-text {
+	width: 6vw;
+}
+
+.reputation {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.reputation .text {
+	position: relative;
+	bottom: 14%;
+}
+
+.reputation-images {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.reputation-images img {
+	width: 100%;
+}

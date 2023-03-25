@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<head>
+	<link rel="stylesheet" href="sheet.css">
+	<script src="sheet.js"></script>
+</head>
+
+<body>
+	<div class="scroll-decoration">
+		<img src="data/img/Curly Header.svg" alt="Curly Header">
+	</div>
+
+	<div class="tabs">
+		<div class="tab active" sheet="statsSheet"      onclick="showSheet('statsSheet')">Stats/Perks/Inventory</div>
+		<div class="tab"        sheet="subclassSheet"   onclick="showSheet('subclassSheet')">Subclass</div>
+		<div class="tab"        sheet="spellsSheet"     onclick="showSheet('spellsSheet')">Spells</div>
+		<div class="tab"        sheet="bioSheet"        onclick="showSheet('bioSheet')">Bio</div>
+		<div class="tab"        sheet="cheatSheetSheet" onclick="showSheet('cheatSheetSheet')">Cheatsheet</div>
+	</div>
+
+	<div class="sheet active" id="statsSheet">
+		<h1>Stats, Perks, and Inventory</h1>
+		<div class="main-box">
+			<div class="split-column">
+				<h2>S.A.C.K. STATS</h2>
+				<div class="organizer column" style="width: 30vw;">
+					<div class="stat-box">
+						<div class="stat-text associate-right">
+							<b>Strength</b>
+						</div>
+						<div class="entry" contenteditable="true">0</div>
+						<div class="entry">0</div>
+						<div class="entry">1</div>
+					</div>
+					<div class="stat-box">
+						<div class="stat-text associate-right">
+							<b>Cunning</b>
+						</div>
+						<div class="entry">0</div>
+						<div class="entry">0</div>
+						<div class="entry">1</div>
+					</div>
+				</div>
+				<div class="organizer column" style="width: 30vw;">
+					<div class="stat-box">
+						<div class="stat-text associate-right">
+							<b>Agility</b>
+						</div>
+						<div class="entry">0</div>
+						<div class="entry">0</div>
+						<div class="entry">1</div>
+					</div>
+					<div class="stat-box">
+						<div class="stat-text associate-right">
+							<b>Knowledge</b>
+						</div>
+						<div class="entry">0</div>
+						<div class="entry">0</div>
+						<div class="entry">1</div>
+					</div>
+				</div>
+			</div>
+			<div class="split-column" style="width: 20vw">
+				<div>
+					<h2>CHARACTER</h2>
+					<b>Name:</b>
+					<br>
+					<b>Race:</b>
+					<br>
+					<b>Class:</b>
+				</div>
+				<div>
+					<h2>REPUTATION</h2>
+					<div style = "display: flex; flex-direction: row; justify-content: space-evenly;">
+						<b>Rank</b>
+						<br>
+						<b>Rank Points</b>
+					</div>
+					<div class = "reputation-images">
+						<div class = "reputation">
+							<img src="data/img/Red Hunters Reputation.svg"  alt="Red Hunters Reputation">
+							<div class = "text">0</div>
+						</div>
+						<div class = "reputation">
+							<img src="data/img/Pale Hunters Reputation.svg" alt="Pale Hunters Reputation">
+							<div class = "text">0</div>
+						</div>
+						<div class = "reputation">
+							<img src="data/img/Blue Hunters Reputation.svg" alt="Blue Hunters Reputation">
+							<div class = "text">0</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h2>CONSTITUTION</h2>
+				</div>
+			</div>
+			<div class="split-column" style="flex-grow: 1">
+				<div>
+					<h2>STATUS EFFECTS</h2>
+				</div>
+				<div>
+					<h2>NOTES</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="sheet" id="subclassSheet">
+		<h1>Subclass</h1>
+	</div>
+
+	<div class="sheet" id="spellsSheet">
+		<h1>Spells</h1>
+	</div>
+	
+	<div class="sheet" id="bioSheet">
+		<h1>Bio</h1>
+	</div>
+	
+	<div class="sheet" id="cheatSheetSheet">
+		<h1>Cheatsheet</h1>
+	</div>
+
+	<div class="scroll-decoration">
+		<img src="data/img/Curly Header.svg" alt="Curly Header" style="transform: rotate(180deg);">
+	</div>
+</body>
