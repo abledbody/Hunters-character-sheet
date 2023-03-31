@@ -28,22 +28,6 @@ const knowledgeSkillIds = [
     "cooking",
 ];
 
-function getValuesById(id) {
-    var values = [];
-    // Get the stat row by id
-    var row = document.getElementById(stat);
-    // Get the values by class
-    values[base] = row.getElementsByClassName("value")[0];
-    values[modifier] = row.getElementsByClassName("modifier")[0];
-    values[dice] = row.getElementsByClassName("dice")[0];
-    return values;
-}
-
-const strengthSkills  = foreach(strengthSkillIds,  getValuesById)
-const agilitySkills   = foreach(agilitySkillIds,   getValuesById)
-const cunningSkills   = foreach(cunningSkillIds,   getValuesById)
-const knowledgeSkills = foreach(knowledgeSkillIds, getValuesById)
-
 function showSheet(sheetId) {
     // Hide all sheets
     var sheets = document.getElementsByClassName("sheet");
@@ -64,6 +48,29 @@ function showSheet(sheetId) {
     tab.classList.add("active");
 }
 
-function sumStatDice(values) {
-    values.dice.value = parseInt(values.base.value) + parseInt(values.modifier.value) + 1;
+function sumStatDice(base, modifier) {
+	console.log(base.value+"\n"+modifier.value+"\n");
+    return Number(base.value) + Number(modifier.value) + 1;
 }
+
+window.addEventListener("load", function() {
+	var stats = document.getElementsByClassName("sack-row");
+
+	for (let i = 0; i < stats.length; i++) {
+		var stat = stats[i];
+		var base = stat.getElementsByClassName("base")[0];
+		var modifier = stat.getElementsByClassName("modifier")[0];
+		base.addEventListener("change", function() {
+			var dice = stat.getElementsByClassName("dice")[0];
+			dice.value = sumStatDice(base, modifier);
+			console.log(dice.value+"\n");
+		});
+	
+		modifier.addEventListener("change", function() {
+			var dice = stat.getElementsByClassName("dice")[0];
+			dice.value = sumStatDice(base, modifier);
+			console.log(dice.value+"\n");
+		});
+		console.log(base.value);
+	};
+});
