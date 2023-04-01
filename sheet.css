@@ -75,15 +75,6 @@ h1, h2, h3, h4, h5 {
 	flex-direction: column;
 }
 
-.organizer {
-	display: flex;
-	justify-content: space-evenly;
-}
-
-.organizer.column {
-	flex-direction: column;
-}
-
 .main-box {
 	display: flex;
 	justify-content: space-evenly;
@@ -105,17 +96,24 @@ h1, h2, h3, h4, h5 {
 	display: grid;
 	grid-template-columns: auto auto;
 	justify-content: space-evenly;
-	width: 30vw;
 	align-items: start;
-	margin: 1vw;
-	gap: 1vw
+	margin: 1.5vw;
+	gap: 2vw
+}
+
+.stat-block {
+	display: flex;
+	flex-direction: column;
+	justify-content: none;
+	align-items: center;
+	width: 12vw;
 }
 
 .sack-row {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 14vw;
+	width: 100%;
 }
 
 .stat-box {
@@ -127,23 +125,24 @@ h1, h2, h3, h4, h5 {
 	border-top: none;
 }
 
-.sack-row .text , .sack-row .number {
-	padding: 0.2vw
+.sack-row .text {
+	flex-grow: 1;
 }
 
-.sack-row .text {
-	width: 7vw;
+.sack-row .text , .sack-row .number {
+	padding: 0.2vw;
 }
 
 .sack-row .number-box {
 	border-left: var(--dotted-border);
 	text-align: center;
-	flex-basis: 2vw;
+	width: 1vw;
 }
 
 .number {
-	width: 100%;
+	width: 1vw;
 	text-align: center;
+	border-left: var(--dotted-border);
 	background-color: transparent;
 	border: none;
 	color: var(--text-color);
